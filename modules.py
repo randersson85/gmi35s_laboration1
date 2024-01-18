@@ -1,28 +1,10 @@
 import random
 import statistics
 # funktion för att skriva ut tal som är jämnt delbara med de två värden som anges av användaren.
-def division():
-        # Tar strängvärdet från input och konverterar detta till int istället för string.
+def division(division1, division2):
+
         # Skapar list som innehåller samtliga nummer.
-    division1 = 0
-    division2 = 0
     list_of_numbers = []
-
-    while division1 <= 0:
-        try:
-            division1 = int(input("Ange det första talet: "))
-            if division1 <= 0:
-                print("Talet måste vara mer än 0")
-        except ValueError:
-            print("Det går endast att ange heltal, vänligen försök igen")
-
-    while division2 <= 0:
-        try:
-            division2 = int(input("Ange det andra talet: "))
-            if division2 <= 0:
-                print("Talet kan måste vara mer än 0")
-        except ValueError:
-            print("Det går endast att ange heltal, vänligen försök igen")
 
             # Skapar en forloop som loopar igenom samtliga heltal från 1 till 1600.
     for x in range(1, 1600):

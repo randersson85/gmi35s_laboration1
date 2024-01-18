@@ -12,8 +12,30 @@ while menu_selector != 3:
 
     try:
         menu_selector = int(input(""))
+        # Logik för meny.
         if menu_selector == 1:
-            print (modules.division())
+            #Skapar variabler som ska skickas till funktionen som argument.
+            division1 = 0
+            division2 = 0
+
+            # Tar strängvärdet från input och konverterar detta till int istället för string.
+            while division1 <= 0:
+                try:
+                    division1 = int(input("Ange det första talet: "))
+                    if division1 <= 0:
+                        print("Talet måste vara mer än 0")
+                except ValueError:
+                    print("Det går endast att ange heltal, vänligen försök igen")
+
+            while division2 <= 0:
+                try:
+                    division2 = int(input("Ange det andra talet: "))
+                    if division2 <= 0:
+                        print("Talet kan måste vara mer än 0")
+                except ValueError:
+                    print("Det går endast att ange heltal, vänligen försök igen")
+                print(modules.division(division1, division2))
+
         elif menu_selector == 2:
             modules.randomnumber()
         elif menu_selector == 3:
